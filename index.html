@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Game Home</title>
+</head>
+
+<body>
+    <div class="home-container">
+        <h1>Welcome to TikTok-Toe Game</h1>
+        <p>Select your game mode</p>
+        <div class="button-group">
+            <button class="player-mode" onclick="selectMode('single')">1 Player</button>
+            <button class="player-mode" onclick="selectMode('two')">2 Players</button>
+        </div>
+    </div>
+
+    <script>
+        function selectMode(mode) {
+            window.location.href = `game.html?mode=${mode}`;
+        }
+    </script>
+</body>
+
+</html>

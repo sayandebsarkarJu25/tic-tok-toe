@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.game {
+    text-align: center;
+}
+
+.button-group {
+    margin-bottom: 20px;
+}
+
+.player-mode {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.player-mode:hover {
+    background-color: #2980b9;
+}
+
+.board-container {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.cell.X {
+    color: #e74c3c;
+}
+
+.cell.O {
+    color: #2ecc71;
+}
+
+.cell:hover {
+    background-color: #ccc;
+}
+
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #c0392b;
+}
+
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    z-index: 1000;
+    animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+.exit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exit-button:hover {
+    background-color: #d35400;
+}
